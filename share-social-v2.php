@@ -41,10 +41,12 @@ function custom_menu() {
 
 
   function share_social_icons_add_to_content( $content ){
+
 	$html = $content;
 	$html .='<span class="dashicons '.get_option('share_social_fb_icon').'"></span>';
 	$html .='<span class="dashicons '.get_option('share_social_twitter_icon').'"></span>';
 	$html .='<span class="dashicons '.get_option('share_social_reddit_icon').'"></span>';
 	$html .='<span class="dashicons '.get_option('share_social_instagram_icon').'"></span>';
 	return $html;
+	
   }
