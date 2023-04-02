@@ -15,7 +15,7 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       share-social
- * Domain Path:       /languages
+ * Domain Path:       /languages TEST
  */
 
 add_action('admin_menu', 'custom_menu');
