@@ -11,6 +11,11 @@ update_option('share_social_twitter_link' , $_POST['share_social_twitter_link'])
 update_option('share_social_reddit_link' , $_POST['share_social_reddit_link']);
 update_option('share_social_instagram_link' , $_POST['share_social_instagram_link']);
 
+update_option('share_social_fb_color' , $_POST['share_social_fb_color']);
+update_option('share_social_twitter_color' , $_POST['share_social_twitter_color']);
+update_option('share_social_reddit_color' , $_POST['share_social_reddit_color']);
+update_option('share_social_instagram_color' , $_POST['share_social_instagram_color']);
+
 }
 ?>
 
@@ -56,6 +61,28 @@ update_option('share_social_instagram_link' , $_POST['share_social_instagram_lin
             <tr>
                <th scope="row"><label for="blogname">Instagram</label></th>
                <td><input  type="text" name="share_social_instagram_link" value="<?php echo get_option('share_social_instagram_link'); ?>" class="regular-text"></td>
+            </tr>
+         </tbody>
+      </table> 
+
+      <h1>DashIcons Links</h1>
+      <table class="form-table" role="presentation">
+         <tbody>
+            <tr>
+               <th scope="row"><label for="blogname">Facebook</label></th>
+               <td><input name="share_social_fb_color" type="text" id="blogname" value="<?php echo get_option('share_social_fb_color'); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+               <th scope="row"><label for="blogname">Twitter</label></th>
+               <td><input name="share_social_twitter_color" type="text" id="blogname" value="<?php echo get_option('share_social_twitter_color'); ?>"class="regular-text"></td>
+            </tr>
+            <tr>
+               <th scope="row"><label for="blogname">Reddit</label></th>
+               <td><input name="share_social_reddit_color" type="text" id="blogname" value="<?php echo get_option('share_social_reddit_color'); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+               <th scope="row"><label for="blogname">Instagram</label></th>
+               <td><input  type="text" name="share_social_instagram_color" value="<?php echo get_option('share_social_instagram_color'); ?>" class="regular-text"></td>
             </tr>
          </tbody>
       </table> 
