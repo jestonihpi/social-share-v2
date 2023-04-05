@@ -16,6 +16,9 @@ update_option('share_social_twitter_color' , $_POST['share_social_twitter_color'
 update_option('share_social_reddit_color' , $_POST['share_social_reddit_color']);
 update_option('share_social_instagram_color' , $_POST['share_social_instagram_color']);
 
+
+update_option('share_social_position' , $_POST['share_social_position']);
+
 }
 ?>
 
@@ -62,10 +65,19 @@ update_option('share_social_instagram_color' , $_POST['share_social_instagram_co
                <th scope="row"><label for="blogname">Instagram</label></th>
                <td><input  type="text" name="share_social_instagram_link" value="<?php echo get_option('share_social_instagram_link'); ?>" class="regular-text"></td>
             </tr>
+            <tr>
+               <th scope="row"><label for="blogname">Postion</label></th>
+               <td>
+                  <select name="share_social_position" id="">
+                     <option <?php if ( get_option('share_social_position') == "before") { ?>selected="true" <?php }; ?> value="before">Before</option>
+                     <option <?php if ( get_option('share_social_position') == "after") { ?>selected="true" <?php }; ?> value="after">After</option>
+                  </select>
+               </td>
+            </tr>
          </tbody>
       </table> 
 
-      <h1>DashIcons Links</h1>
+      <h1>DashIcons Color</h1>
       <table class="form-table" role="presentation">
          <tbody>
             <tr>
