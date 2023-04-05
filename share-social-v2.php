@@ -41,10 +41,13 @@ function custom_menu() {
 
 
   function share_social_icons_add_to_content( $content ){
+
 	$html = $content;
-	$html .='<span class="dashicons '.get_option('share_social_fb_icon').'"></span>';
-	$html .='<span class="dashicons '.get_option('share_social_twitter_icon').'"></span>';
-	$html .='<span class="dashicons '.get_option('share_social_reddit_icon').'"></span>';
-	$html .='<span class="dashicons '.get_option('share_social_instagram_icon').'"></span>';
+	$html .='<a href="'.get_option('share_social_fb_link').'" target="_new"><span class="dashicons '.get_option('share_social_fb_icon').'" style="color:'.get_option('share_social_fb_color').'"></span></a>';
+	$html .='<a href="'.get_option('share_social_twitter_link').'" target="_new"><span class="dashicons '.get_option('share_social_twitter_icon').'" style="color:'.get_option('share_social_twitter_color').'"></span>';
+	$html .='<a href="'.get_option('share_social_reddit_link').'" target="_new"><span class="dashicons '.get_option('share_social_reddit_icon').'" style="color:'.get_option('share_social_reddit_color').'"></span></a>';
+	$html .='<a href="'.get_option('share_social_instagram_link').'" target="_new"><span class="dashicons '.get_option('share_social_instagram_icon').'" style="color:'.get_option('share_social_instagram_color').'"></span></a>';
 	return $html;
+
   }
+  
