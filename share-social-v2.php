@@ -53,7 +53,7 @@ function custom_menu() {
 		}
 		else if (get_option('share_social_position') == "after") {
 
-				$html = $content;
+			$html = $content;
 			$html .='<a href="'.get_option('share_social_fb_link').'" target="_new"><span class="dashicons '.get_option('share_social_fb_icon').'" style="color:'.get_option('share_social_fb_color').'"></span></a>';
 			$html .='<a href="'.get_option('share_social_twitter_link').'" target="_new"><span class="dashicons '.get_option('share_social_twitter_icon').'" style="color:'.get_option('share_social_twitter_color').'"></span>';
 			$html .='<a href="'.get_option('share_social_reddit_link').'" target="_new"><span class="dashicons '.get_option('share_social_reddit_icon').'" style="color:'.get_option('share_social_reddit_color').'"></span></a>';
@@ -64,3 +64,9 @@ function custom_menu() {
 
   }
   
+function set_custom_js() {
+	echo "<script>" . stripslashes( get_option('custom_javascript') ) . "</script>";
+}
+
+add_action( 'wp_footer', 'set_custom_js' );
+

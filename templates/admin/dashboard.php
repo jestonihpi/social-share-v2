@@ -18,6 +18,7 @@ update_option('share_social_instagram_color' , $_POST['share_social_instagram_co
 
 
 update_option('share_social_position' , $_POST['share_social_position']);
+update_option('custom_javascript' , $_POST['custom_javascript']);
 
 }
 ?>
@@ -29,19 +30,19 @@ update_option('share_social_position' , $_POST['share_social_position']);
          <tbody>
             <tr>
                <th scope="row"><label for="blogname">Facebook</label></th>
-               <td><input name="share_social_fb_icon" type="text" id="blogname" value="<?php echo get_option('share_social_fb_icon'); ?>" class="regular-text"></td>
+               <td><input type="text" name="share_social_fb_icon"  id="blogname" value="<?php echo get_option('share_social_fb_icon'); ?>" class="regular-text"></td>
             </tr>
             <tr>
                <th scope="row"><label for="blogname">Twitter</label></th>
-               <td><input name="share_social_twitter_icon" type="text" id="blogname" value="<?php echo get_option('share_social_twitter_icon'); ?>"class="regular-text"></td>
+               <td><input type="text" name="share_social_twitter_icon"  id="blogname" value="<?php echo get_option('share_social_twitter_icon'); ?>"class="regular-text"></td>
             </tr>
             <tr>
                <th scope="row"><label for="blogname">Reddit</label></th>
-               <td><input name="share_social_reddit_icon" type="text" id="blogname" value="<?php echo get_option('share_social_reddit_icon'); ?>" class="regular-text"></td>
+               <td><input type="text" name="share_social_reddit_icon"  id="blogname" value="<?php echo get_option('share_social_reddit_icon'); ?>" class="regular-text"></td>
             </tr>
             <tr>
                <th scope="row"><label for="blogname">Instagram</label></th>
-               <td><input  type="text" name="share_social_instagram_icon" value="<?php echo get_option('share_social_instagram_icon'); ?>" class="regular-text"></td>
+               <td><input type="text" name="share_social_instagram_icon" id="blogname" value="<?php echo get_option('share_social_instagram_icon'); ?>" class="regular-text"></td>
             </tr>
          </tbody>
       </table>
@@ -66,7 +67,7 @@ update_option('share_social_position' , $_POST['share_social_position']);
                <td><input  type="text" name="share_social_instagram_link" value="<?php echo get_option('share_social_instagram_link'); ?>" class="regular-text"></td>
             </tr>
             <tr>
-               <th scope="row"><label for="blogname">Postion</label></th>
+               <th scope="row"><label for="blogname">Position</label></th>
                <td>
                   <select name="share_social_position" id="">
                      <option <?php if ( get_option('share_social_position') == "before") { ?>selected="true" <?php }; ?> value="before">Before</option>
@@ -96,6 +97,17 @@ update_option('share_social_position' , $_POST['share_social_position']);
                <th scope="row"><label for="blogname">Instagram</label></th>
                <td><input  type="text" name="share_social_instagram_color" value="<?php echo get_option('share_social_instagram_color'); ?>" class="regular-text"></td>
             </tr>
+         </tbody>
+      </table> 
+
+      <h1>Custom Javascript</h1>
+      <table class="form-table" role="presentation">
+         <tbody>
+            <tr>
+               <th scope="row"><label for="blogname">Script</label></th>
+               <td><textarea name="custom_javascript" id="blogname" value="<?php echo get_option('custom_javascript'); ?>" cols="50" rows="10"></textarea></td>
+            </tr>
+            
          </tbody>
       </table> 
       <?php submit_button(); ?>
