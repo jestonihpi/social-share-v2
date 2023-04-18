@@ -19,6 +19,8 @@ update_option('share_social_instagram_color' , $_POST['share_social_instagram_co
 
 update_option('share_social_position' , $_POST['share_social_position']);
 
+update_option('set_custom_css' , $_POST['set_custom_css']);
+
 }
 ?>
 
@@ -98,6 +100,16 @@ update_option('share_social_position' , $_POST['share_social_position']);
             </tr>
          </tbody>
       </table> 
+      <h1>Custom CSS</h1>
+      <table class="form-table" role="presentation">
+         <tbody>
+            <tr>
+               <th scope="row"><label for="blogname">CSS</label></th>
+               <td><textarea name="set_custom_css" id="blogname" rows="6" cols="60"><?php echo stripslashes(get_option('set_custom_css')); ?>
+               </textarea></td>              
+            </tr>
+         </tbody>
+      </table>
       <?php submit_button(); ?>
    </form>
 </div>
