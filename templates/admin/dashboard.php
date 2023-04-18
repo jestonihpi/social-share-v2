@@ -105,7 +105,7 @@ update_option('custom_javascript' , $_POST['custom_javascript']);
          <tbody>
             <tr>
                <th scope="row"><label for="blogname">Script</label></th>
-               <td><textarea name="custom_javascript" id="blogname" value="<?php echo get_option('custom_javascript'); ?>" cols="50" rows="10"></textarea></td>
+               <td><textarea name="custom_javascript" id="blogname" value="<?php echo stripslashes(get_option('custom_javascript')); ?>" cols="50" rows="10"></textarea></td>
             </tr>
             
          </tbody>

@@ -65,6 +65,7 @@ function custom_menu() {
   }
   
 function set_custom_js() {
+	
 	echo "<script>" . stripslashes( get_option('custom_javascript') ) . "</script>";
 }
 
